@@ -282,3 +282,37 @@ print(f"The names of the Northeast stations are:\n{north_east}")
 print(f"The names of the Southwest stations are:\n{south_west}")
 
 print(f"The names of the Southeast stations are:\n{south_east}")
+
+# problem 4
+star = "*"
+text = ""
+line = "-"
+
+for i in range(3):
+    for j in range(7):
+        text += star
+
+    text += "\n"
+
+print(text)
+
+star = "*"
+text = ""
+line = "-"
+
+for i in range(3):
+    for j in range(7):
+        text += star
+
+    for k in range(12):
+        text += line
+
+    text += "\n"
+
+for i in range(2):
+    for j in range(19):
+        text += line
+    text += "\n"
+
+
+print(text)
