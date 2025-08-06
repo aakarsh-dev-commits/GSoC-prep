@@ -1,5 +1,5 @@
-from Exercise4 import fahr_to_celsius
-from Exercise4 import temp_classifier
+from source.Exercise4 import fahr_to_celsius
+from source.Exercise4 import temp_classifier
 
 # problem 3
 
@@ -356,7 +356,7 @@ ones = 0
 twos = 0
 threes = 0
 
-for classes in temp_celsius:
+for classes in temp_classes:
     if classes == 0:
         zeros = zeros + 1
     elif classes == 1:
