@@ -51,3 +51,29 @@ kumpula.to_csv(kumpula_output, sep=",")
 rovaniemi.to_csv(rovaniemi_output, sep=",")
 
 print(kumpula.head())
+
+# problem 3
+
+kumpula = pd.read_csv("data/Kumpula_temps_May_Aug_2017.csv")
+rovaniemi = pd.read_csv("data/Rovaniemi_temps_May_Aug_2017.csv")
+
+kumpula_median = kumpula["Celsius"].median()
+rovaniemi_median = rovaniemi["Celsius"].median()
+
+kumpula_may = kumpula.loc[
+    (kumpula["YR--MODAHRMN"] >= 201705010000)
+    & (kumpula["YR--MODAHRMN"] <= 201705312400)
+]
+rovaniemi_may = rovaniemi.loc[
+    (rovaniemi["YR--MODAHRMN"] >= 201705010000)
+    & (rovaniemi["YR--MODAHRMN"] <= 201705312400)
+]
+
+kumpula_june = kumpula.loc[
+    (kumpula["YR--MODAHRMN"] >= 201707010000)
+    & (kumpula["YR--MODAHRMN"] <= 201707312400)
+]
+rovaniemi_june = rovaniemi.loc[
+    (rovaniemi["YR--MODAHRMN"] >= 201707010000)
+    & (rovaniemi["YR--MODAHRMN"] <= 201707312400)
+]
